@@ -3,12 +3,7 @@
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/outerweb/settings.svg?style=flat-square)](https://packagist.org/packages/outerweb/settings)
 [![Total Downloads](https://img.shields.io/packagist/dt/outerweb/settings.svg?style=flat-square)](https://packagist.org/packages/outerweb/settings)
 
-This package adds multi-language support to your Laravel application:
-
-- Multiple locales configuration
-- Localized routes
-- Translatable route segments
-- Automatic user locale detection
+This package adds application wide settings stored in your database.
 
 ## Installation
 
