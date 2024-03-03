@@ -24,6 +24,11 @@ class SettingsServiceProvider extends PackageServiceProvider
                 CacheCommand::class,
             ])
             ->hasInstallCommand(function (InstallCommand $command) {
+                $command
+                    ->publishConfigFile()
+                    ->publishMigrations()
+                    ->askToRunMigrations();
+
                 $composerFile = file_get_contents(__DIR__ . '/../composer.json');
 
                 if ($composerFile) {

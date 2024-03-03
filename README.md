@@ -13,22 +13,10 @@ You can install the package via composer:
 composer require outerweb/settings
 ```
 
-Publish the migration files:
+Run the install command:
 
 ```bash
-php artisan vendor:publish --provider="OuterWeb\Settings\SettingsServiceProvider" --tag="settings-migrations"
-```
-
-Publish the config file:
-
-```bash
-php artisan vendor:publish --provider="OuterWeb\Settings\SettingsServiceProvider" --tag="settings-config"
-```
-
-Run the migrations:
-
-```bash
-php artisan migrate
+php artisan settings:install
 ```
 
 ## Usage
