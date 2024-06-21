@@ -41,4 +41,9 @@ class SettingsServiceProvider extends PackageServiceProvider
                 }
             });
     }
+
+    public function packageRegistered()
+    {
+        $this->app->singleton(SettingRegistar::class);
+    }
 }
