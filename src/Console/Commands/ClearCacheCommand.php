@@ -3,6 +3,7 @@
 namespace Outerweb\Settings\Console\Commands;
 
 use Illuminate\Console\Command;
+use Outerweb\Settings\SettingRegistar;
 
 class ClearCacheCommand extends Command
 {
@@ -12,7 +13,7 @@ class ClearCacheCommand extends Command
 
     public function handle()
     {
-        cache()->forget(config('settings.cache_key'));
+        cache()->forget(app(SettingRegistar::class)->cacheKey);
 
         $this->info('Settings cache cleared.');
 

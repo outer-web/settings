@@ -3,6 +3,7 @@
 namespace Outerweb\Settings\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Outerweb\Settings\SettingRegistar;
 
 class Setting extends Model
 {
@@ -18,7 +19,7 @@ class Setting extends Model
 
     public static function get(string $key = '*', mixed $default = null): mixed
     {
-        $settings = cache()->rememberForever(config('settings.cache_key'), function () {
+        $settings = cache()->rememberForever(app(SettingRegistar::class)->cacheKey, function () {
             $settings = [];
 
             Setting::all()->each(function ($setting) use (&$settings) {
@@ -42,7 +43,7 @@ class Setting extends Model
             ['value' => $value]
         );
 
-        cache()->forget(config('settings.cache_key'));
+        cache()->forget(app(SettingRegistar::class)->cacheKey);
 
         return $setting->value;
     }

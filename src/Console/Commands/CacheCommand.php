@@ -3,6 +3,8 @@
 namespace Outerweb\Settings\Console\Commands;
 
 use Illuminate\Console\Command;
+use Outerweb\Settings\SettingRegistar;
+
 
 class CacheCommand extends Command
 {
@@ -12,7 +14,7 @@ class CacheCommand extends Command
 
     public function handle()
     {
-        cache()->rememberForever(config('settings.cache_key'), function () {
+        cache()->rememberForever(app(SettingRegistar::class)->cacheKey, function () {
             return \Outerweb\Settings\Models\Setting::get('*');
         });
 
