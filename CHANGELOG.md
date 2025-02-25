@@ -2,6 +2,12 @@
 
 All notable changes to `settings` will be documented in this file.
 
+## 1.0.4 - 2025-02-25
+
+### Added
+
+- Added support for Laravel 12.
+
 ## 1.0.3 - 2024-03-12
 
 ### Added
