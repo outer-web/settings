@@ -2,6 +2,18 @@
 
 All notable changes to `settings` will be documented in this file.
 
+## 2.0.2 - 2025-10-09
+
+### Fixed
+
+-   Fixed wrong reference to facade in composer.json autoload section.
+
+## 2.0.1 - 2025-10-08
+
+### Added
+
+-   Added install command
+
 ## 2.0.0 - 2025-10-07
 
 ### Changed

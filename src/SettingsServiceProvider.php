@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Outerweb\Settings;
 
 use Outerweb\Settings\Services\Setting;
+use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
@@ -17,7 +18,14 @@ class SettingsServiceProvider extends PackageServiceProvider
             ->hasConfigFile()
             ->hasMigrations([
                 'create_settings_table',
-            ]);
+            ])
+            ->hasInstallCommand(function (InstallCommand $command) {
+                $command
+                    ->publishConfigFile()
+                    ->publishMigrations()
+                    ->askToRunMigrations()
+                    ->askToStarRepoOnGitHub('outer-web/settings');
+            });
     }
 
     public function boot(): void

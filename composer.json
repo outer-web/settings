@@ -70,7 +70,7 @@
                 "Outerweb\\Settings\\SettingsServiceProvider"
             ],
             "aliases": {
-                "Settings": "Outerweb\\Settings\\Facades\\Settings"
+                "Setting": "Outerweb\\Settings\\Facades\\Setting"
             }
         }
     },
