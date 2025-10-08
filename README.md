@@ -24,6 +24,12 @@ You can install the package via composer:
 composer require outerweb/settings
 ```
 
+Run the install command to publish the migration and the config file:
+
+```bash
+php artisan settings:install
+```
+
 ## Usage
 
 This package tries to mimic the Config functionality of Laravel as close as possible.

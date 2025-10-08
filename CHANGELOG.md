@@ -2,6 +2,12 @@
 
 All notable changes to `settings` will be documented in this file.
 
+## 2.0.1 - 2025-10-08
+
+### Added
+
+-   Added install command
+
 ## 2.0.0 - 2025-10-07
 
 ### Changed
